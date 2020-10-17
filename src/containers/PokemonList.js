@@ -58,6 +58,7 @@ const PokemonList = (props) => {
                 pageRangeDisplay={2}
                 marginPagesDisplayed={1}
                 onPageChange={(data) => FetchData(data.selected + 1)}
+                containerClassName={"pagination"}
                 />
             )}
             </div>
