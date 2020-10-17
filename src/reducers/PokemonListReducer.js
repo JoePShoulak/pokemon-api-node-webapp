@@ -1,7 +1,8 @@
 const DefaultState = {
     loading: false,
     data: [],
-    errorMsg: ""
+    errorMsg: "",
+    count: 0
 }
 
 export const PokemonListReducer = (state = DefaultState, action) => {
@@ -17,18 +18,21 @@ export const PokemonListReducer = (state = DefaultState, action) => {
             return {
                 ...state,
                 loading: false,
-                errorMsg: "unable to get pokemon"
+                errorMsg: "Unable to retrieve list from the server"
             };
 
         case "POKEMON_LIST_SUCCESS":
             return {
                 ...state,
                 loading: false,
-                errorMsg: "",
-                data: action.payload
+                data: action.payload.results,
+                count: action.payload.count,
+                errorMsg: ""
             };
 
         default:
             return state
     }
 }
+
+export default PokemonListReducer;

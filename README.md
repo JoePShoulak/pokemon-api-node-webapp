@@ -73,3 +73,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 Started with `npm install axios lodash react-redux redux redux-thunk redux-devtools-extension react-router-dom`
 
 `npm run start` to start
+
+at one point ran `npm install react-paginate --save`
